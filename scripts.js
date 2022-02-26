@@ -2,5 +2,9 @@
 var age = 19;
 
 //functionality
-var el = document.getElementById('age');
-el.textContent = age;
+//select age element and change the text content to the age variable
+// document.querySelector("#age").textContent = age;
+var ageElement = document.querySelector("#age");
+var age1 = ageElement.textContent;
+
+
