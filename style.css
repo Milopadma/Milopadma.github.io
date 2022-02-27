@@ -1,0 +1,148 @@
+@keyframes slideUpFadeIn {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animation-slideUpFadeIn {
+  animation-name: slideUpFadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+body {
+  background-image: url(https://Milopadma.github.io/images/bg1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+.center {
+  /* center a div */
+  display: table;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.unifont {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 400;
+  color: rgba(250, 250, 250, 0.727);
+}
+
+.size {
+  font-size: 1.5em;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  align-content: center;
+  padding-left: 30%;
+}
+
+.button {
+  /* create a button */
+  background-color: #595c59;
+  border: none;
+  padding: 15px 32px;
+  margin: 0 -0.2%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.header-button {
+  /* create a button */
+  background-color: #595c59;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: auto;
+  padding: 15px;
+  margin: -3px;
+}
+
+.header-button:hover {
+  background-color: #717571;
+  color: white;
+  font-size: 110%;
+  cursor: pointer;
+}
+
+.header-container {
+  height: 50%;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 40px auto 40px;
+  grid-auto-rows: 40px;
+}
+
+.header-line{
+  background-color: rgb(49, 48, 48);
+}
+
+.box {
+  background-color: #2b2b2b;
+  border: none;
+  padding: 15px 32px;
+  margin: 0 -0.2%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 100%;
+  font-weight: bold;
+  cursor: default;
+}
+
+.box-nobg {
+  border: none;
+  padding: 15px 32px;
+  margin: 0 -0.2%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 100%;
+  font-weight: bold;
+  cursor: default;
+}
+
+.button:hover {
+  background-color: #717271;
+  cursor: pointer;
+  font-size: 1.1em;
+  opacity: 0.6;
+}
+
+/* gridSystem */
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 40px auto 40px;
+  grid-gap: 3px;
+  grid-template-areas:
+    "header header header"
+    ". main ."
+    "footer footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}

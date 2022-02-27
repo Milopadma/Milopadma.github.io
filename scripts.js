@@ -6,5 +6,4 @@ var age = 19;
 // document.querySelector("#age").textContent = age;
 var ageElement = document.querySelector("#age");
 var age1 = ageElement.textContent;
-
-
+ageElement.textContent = age;
