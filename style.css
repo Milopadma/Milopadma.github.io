@@ -194,23 +194,23 @@ a:hover::after {
 
 .footerLeft {
   grid-area: footerLeft;
-  position: fixed;
   left: 10vw;
-  margin-top: 93vh;
+  height: 50px;
+  margin-top: 7vh;
   font-size: calc(12px + 0.33vw);
 }
 
 .footerRight {
   grid-area: footerRight;
-  position: fixed;
   right: 10vw;
-  margin-top: 93vh;
+  height: 50px;
+  margin-top: 7vh;
   font-size: calc(12px + 0.33vw);
 }
 
 @media (max-width: 500px) {
   body {
-    background-position: 0px -47vh;
+    background-position: 0px -37vh;
   }
 
   html {
@@ -231,7 +231,7 @@ a:hover::after {
     padding: 0.15em 36.4vw;
   }
 
-  #sites{
+  #sites {
     padding: 0.15em 42.4vw;
   }
 
@@ -246,5 +246,122 @@ a:hover::after {
     background-color: rgba(0, 0, 0, 0);
     flex-direction: column;
     align-items: left;
+  }
+}
+
+/* timeline in portfolio.html */
+
+/* this is the actual timeline line */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  top: 0; /*start from the top of the div*/
+  bottom: 0; /*extends it to the bottom of the div*/
+  left: 60%; /*centers it horizontally*/
+  margin-left: -3px;
+  border-radius: 400px;
+}
+
+/* this here is the container around content */
+.tlcontainer {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.tlleft {
+  left: -10%;
+}
+
+.tlright {
+  left: 57%;
+}
+
+/*arrows pointing right for left container */
+.tlleft:before {
+  content: "";
+  height: 0;
+  position: absolute;
+  top: 55px;
+  width: 0;
+  z-index: 1;
+  right: 16px;
+  border: medium solid white;
+  border-color: transparent transparent transparent white; /*this makes the shape*/
+  border-width: 10px 0 10px 10px;
+}
+
+/* arrows pointing left for right container */
+.tlright:before {
+  content: "";
+  height: 0;
+  position: absolute;
+  top: 55px;
+  width: 0;
+  z-index: 1;
+  left: 26px;
+  border: medium solid white;
+  border-color: transparent white transparent transparent; /*this makes the shape*/
+  border-width: 10px 10px 10px 0;
+}
+
+/* the actual content */
+.tlcontent {
+  padding: 20px 20px;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* media queries for responsive timeline on <600px wide screens */
+@media screen and (max-width: 600px) {
+  /* place the timeline to the left */
+  .timeline:after {
+    left: 31px;
+  }
+
+  /* full width containers */
+  .tlcontainer {
+    font-size: 15px;
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    padding-top: 1px;
+  }
+
+  .tlcontent {
+    padding: 20px 10px;
+  }
+  
+
+  /* this is to make sure all arrows are pointing to the left */
+  .tlcontainer::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  .tlleft {
+    left: 0;
+  }
+
+  /* this is to make sure all circles are at the same spot */
+  .tlleft::after,
+  .tlright::after {
+    left: 15px;
+  }
+
+  /* this is to make sure all right containers behave like the left ones */
+  .tlright {
+    left: 0%;
   }
 }
