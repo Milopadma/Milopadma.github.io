@@ -18,9 +18,11 @@
 
 body {
   background-image: url(https://Milopadma.github.io/images/bg1.jpg);
+  background-attachment: fixed;
+  background-position: 0px -600px;
   background-size: cover;
-  background-repeat: no-repeat;
   background-color: black;
+  background-repeat: no-repeat;
 }
 
 .center {
@@ -32,7 +34,7 @@ body {
 
 .unifont {
   font-family: "Courier New", Courier, monospace;
-  color: rgba(250, 250, 250, 0.727);
+  color: rgb(255, 255, 255);
   font-size: calc(15px + 0.33vw);
   padding: 2vh 10vw;
 }
@@ -127,7 +129,7 @@ a {
 }
 
 a::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   top: 60%;
@@ -143,7 +145,6 @@ a:hover::after {
   top: 0;
 }
 
-
 /* gridSystem */
 .container {
   height: 100%;
@@ -158,16 +159,17 @@ a:hover::after {
 }
 
 .header {
+  background-color: #595c59;
   grid-area: header;
   border: 1px solid red;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 .main {
+  animation: 0.7s ease-out 0s 1 slideUpFadeIn;
   margin-top: 30px;
   grid-area: main;
   text-align: left;
@@ -177,4 +179,25 @@ a:hover::after {
 .footer {
   grid-area: footer;
   border: 1px solid red;
+}
+
+@media (max-width: 500px) {
+  .header-button {
+    font-size: 5vw;
+    padding: 0.1em 9em;
+  }
+
+  .main{
+    margin-top: 25vw;
+  }
+
+
+  .header{
+    background-color: rgba(0, 0, 0, 0);
+    flex-direction: column; 
+    align-items: left;
+
+  }
+
+  
 }
