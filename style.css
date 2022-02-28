@@ -10,10 +10,13 @@
 }
 
 @keyframes gradientText {
-  from { background-position: 0%; }
-  to { background-position: 100%; }
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 100%;
+  }
 }
-
 
 .animation-slideUpFadeIn {
   animation-name: slideUpFadeIn;
@@ -23,12 +26,13 @@
 }
 
 body {
-  background-image: url(https://Milopadma.github.io/images/bg1.jpg);
+  background-image: url(./images/bg1.jpg);
   background-attachment: fixed;
-  background-position: 0px -600px;
+  background-position: 0px -51vh;
   background-size: cover;
   background-color: black;
   background-repeat: no-repeat;
+  overflow-x: clip;
 }
 
 .center {
@@ -127,14 +131,13 @@ p {
   max-width: 28em;
 }
 
-.gradient-animation-text{
+.gradient-animation-text {
   background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 300%;
   background-position: -100%;
   animation: gradientText 3s infinite alternate-reverse;
-
 }
 
 a {
@@ -170,12 +173,12 @@ a:hover::after {
   grid-template-areas:
     "header header header"
     "main main ."
-    "footer footer footer";
+    "footerLeft . footerRight";
 }
 
 .header {
-  background-color: #595c59;
   grid-area: header;
+  background-color: #595c59;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -183,33 +186,65 @@ a:hover::after {
 }
 
 .main {
+  grid-area: main;
   animation: 0.7s ease-out 0s 1 slideUpFadeIn;
   margin-top: 30px;
-  grid-area: main;
   text-align: left;
 }
 
-.footer {
-  grid-area: footer;
+.footerLeft {
+  grid-area: footerLeft;
+  position: fixed;
+  left: 10vw;
+  margin-top: 93vh;
+  font-size: calc(12px + 0.33vw);
+}
+
+.footerRight {
+  grid-area: footerRight;
+  position: fixed;
+  right: 10vw;
+  margin-top: 93vh;
+  font-size: calc(12px + 0.33vw);
 }
 
 @media (max-width: 500px) {
-  .header-button {
-    font-size: 5vw;
-    padding: 0.1em 9em;
+  body {
+    background-position: 0px -47vh;
   }
 
-  .main{
+  html {
+    width: 100%;
+  }
+
+  .header-button {
+    font-size: 5vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+
+  #home {
+    padding: 0.15em 44vw;
+  }
+
+  #portfolio {
+    padding: 0.15em 36.4vw;
+  }
+
+  #sites{
+    padding: 0.15em 42.4vw;
+  }
+
+  #contact {
+    padding: 0.15em 39.5vw;
+  }
+  .main {
     margin-top: 25vw;
   }
 
-
-  .header{
+  .header {
     background-color: rgba(0, 0, 0, 0);
-    flex-direction: column; 
+    flex-direction: column;
     align-items: left;
-
   }
-
-  
 }
