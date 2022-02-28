@@ -220,8 +220,13 @@ a:hover::after {
 }
 
 @media (max-width: 500px) {
-  body {
-    background-position: 0px -37vh;
+  body{
+    padding-top: 1px;
+    margin-top: 2px; 
+  }
+
+  body::before {
+    background-position: 0px -40vh;
   }
 
   html {
@@ -305,7 +310,7 @@ a:hover::after {
   top: 55px;
   width: 0;
   z-index: 1;
-  right: 16px;
+  right: 21px;
   border: medium solid white;
   border-color: transparent transparent transparent white; /*this makes the shape*/
   border-width: 10px 0 10px 10px;
@@ -327,7 +332,7 @@ a:hover::after {
 
 /* the actual content */
 .tlcontent {
-  padding: 20px 20px;
+  padding: 10px 10px;
   position: relative;
   border-radius: 6px;
 }
