@@ -66,7 +66,6 @@ body {
 
 .header-button {
   /* create a button */
-  border: 1px solid red;
   background-color: #595c59;
   display: inline-block;
   text-decoration: none;
@@ -161,7 +160,6 @@ a:hover::after {
 .header {
   background-color: #595c59;
   grid-area: header;
-  border: 1px solid red;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -173,12 +171,10 @@ a:hover::after {
   margin-top: 30px;
   grid-area: main;
   text-align: left;
-  border: 1px solid red;
 }
 
 .footer {
   grid-area: footer;
-  border: 1px solid red;
 }
 
 @media (max-width: 500px) {

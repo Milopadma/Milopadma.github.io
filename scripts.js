@@ -11,3 +11,7 @@ function Age() {
 
 Age();
 
+//listen for click on Portfolio 
+document.getElementById("portfolio").addEventListener("click", function(){
+    window.location.href = "https://milopadma.github.io/portfolio/";
+});
