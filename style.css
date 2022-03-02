@@ -217,6 +217,7 @@ a:hover::after {
 
 .footerRight {
   grid-area: footerRight;
+  text-align: end;
   right: 10vw;
   height: 50px;
   margin-top: 7vh;
@@ -300,11 +301,12 @@ a:hover::after {
 }
 
 .tlleft {
-  left: -10%;
+  left: 0%;
+
 }
 
 .tlright {
-  left: 57%;
+  left: 60%;
 }
 
 /*arrows pointing right for left container */
@@ -315,7 +317,7 @@ a:hover::after {
   top: 55px;
   width: 0;
   z-index: 1;
-  right: 21px;
+  right: 30px;
   border: medium solid white;
   border-color: transparent transparent transparent white; /*this makes the shape*/
   border-width: 10px 0 10px 10px;
@@ -329,7 +331,7 @@ a:hover::after {
   top: 55px;
   width: 0;
   z-index: 1;
-  left: 26px;
+  left: 30px;
   border: medium solid white;
   border-color: transparent white transparent transparent; /*this makes the shape*/
   border-width: 10px 10px 10px 0;
@@ -343,7 +345,7 @@ a:hover::after {
 }
 
 /* media queries for responsive timeline on <600px wide screens */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   /* place the timeline to the left */
   .timeline:after {
     left: 31px;
