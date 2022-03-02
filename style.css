@@ -46,6 +46,10 @@ body::before {
   overflow-x: hidden;
 }
 
+body {
+  background: #000000 url(./images/bg1.jpg);
+}
+
 .center {
   /* center a div */
   display: table;
@@ -145,6 +149,7 @@ p {
 .gradient-animation-text {
   background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 300%;
   background-position: -100%;
