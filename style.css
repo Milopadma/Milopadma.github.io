@@ -44,7 +44,7 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; 
+  background-size: cover;
   background-repeat: no-repeat;
   overflow-x: hidden;
 }
@@ -225,11 +225,12 @@ a:hover::after {
 }
 
 @media (max-width: 500px) {
-  body{
+  body {
     padding-top: 1px;
-    margin-top: 2px; 
-    background-position: 0px -40vh;
+    margin-top: 2px;
+    background-position: 0px -28vh;
     background-attachment: initial;
+    position: relative;
   }
 
   /* body::before {
@@ -246,6 +247,14 @@ a:hover::after {
   }
 
   #home {
+    padding-left: 1.8em;
+  }
+
+  #contact {
+    padding-right: 1.8em;
+  }
+  /* 
+  #home {
     padding: 0.15em 44vw;
   }
 
@@ -259,14 +268,11 @@ a:hover::after {
 
   #contact {
     padding: 0.15em 39.5vw;
-  }
-  .main {
-    margin-top: 25vw;
-  }
+  } */
 
   .header {
     background-color: rgba(0, 0, 0, 0);
-    flex-direction: column;
+    flex-direction: row;
     align-items: left;
   }
 }
@@ -302,7 +308,6 @@ a:hover::after {
 
 .tlleft {
   left: 0%;
-
 }
 
 .tlright {
@@ -363,7 +368,6 @@ a:hover::after {
   .tlcontent {
     padding: 20px 10px;
   }
-  
 
   /* this is to make sure all arrows are pointing to the left */
   .tlcontainer::before {
