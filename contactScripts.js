@@ -1,4 +1,3 @@
-
 //menu functionality
 //listen for click on Home, then go to Home page
 document.getElementById("home").addEventListener("click", function(){
