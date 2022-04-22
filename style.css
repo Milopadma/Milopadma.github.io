@@ -309,7 +309,7 @@ a:hover::after {
 }
 
 /* media queries for responsive timeline on <800px wide screens */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1500px) {
   /* place the timeline to the left */
 
   .timeline:after {
