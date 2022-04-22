@@ -102,6 +102,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  box-shadow: #151515 1px 12px 50px;
 }
 
 
@@ -196,16 +197,18 @@ a:hover::after {
   grid-gap: 3px;
   grid-template-areas:
     "header header header"
-    "main main ."
+    "main main main"
     "footerLeft . footerRight";
 }
 
 
 .main {
   grid-area: main;
+  padding: 15px;
   animation: 0.7s ease-out 0s 1 slideUpFadeIn;
   margin-top: 30px;
   text-align: left;
+  box-shadow: #151515 1px 12px 50px;
 }
 
 .footerLeft {
@@ -227,58 +230,6 @@ a:hover::after {
   font-size: calc(12px + 0.33vw);
 }
 
-@media (max-width: 500px) {
-  body {
-    padding-top: 1px;
-    margin-top: 2px;
-    background-position: 0px -28vh;
-    background-attachment: initial;
-    position: relative;
-  }
-
-  /* body::before {
-  } */
-
-  html {
-    width: 100%;
-  }
-
-  .header-button {
-    font-size: 5vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-  }
-
-  /* #home {
-    padding-left: 1.8em;
-  }
-
-  #contact {
-    padding-right: 1.8em;
-  } */
-  /* 
-  #home {
-    padding: 0.15em 44vw;
-  }
-
-  #portfolio {
-    padding: 0.15em 36.4vw;
-  }
-
-  #sites {
-    padding: 0.15em 42.4vw;
-  }
-
-  #contact {
-    padding: 0.15em 39.5vw;
-  } */
-
-  .header {
-    background-color: rgba(0, 0, 0, 0);
-    flex-direction: row;
-    align-items: left;
-  }
-}
 
 /* timeline in portfolio.html */
 
@@ -287,6 +238,10 @@ a:hover::after {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.timeline p {
+  margin-right: 32px;
 }
 
 .timeline::after {
@@ -350,11 +305,13 @@ a:hover::after {
   padding: 10px 10px;
   position: relative;
   border-radius: 6px;
+  margin-right: 32px;
 }
 
-/* media queries for responsive timeline on <600px wide screens */
+/* media queries for responsive timeline on <800px wide screens */
 @media screen and (max-width: 800px) {
   /* place the timeline to the left */
+
   .timeline:after {
     left: 31px;
   }
@@ -362,10 +319,12 @@ a:hover::after {
   /* full width containers */
   .tlcontainer {
     font-size: 15px;
-    width: 100%;
+    width: 80%;
     padding-left: 70px;
     padding-right: 25px;
     padding-top: 1px;
+    padding-right: 0;
+
   }
 
   .tlcontent {
@@ -393,5 +352,67 @@ a:hover::after {
   /* this is to make sure all right containers behave like the left ones */
   .tlright {
     left: 0%;
+  }
+
+  .timeline p {
+    margin-right: 0px;
+  }
+  
+  .header{
+    box-shadow: #1d1c1c 1px 18px 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    padding-top: 1px;
+    margin-top: 2px;
+    background-position: 0px -28vh;
+    background-attachment: initial;
+    position: relative;
+  }
+
+  /* body::before {
+  } */
+
+  html {
+    width: 100%;
+  }
+
+  .header-button {
+    font-size: 5vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+
+  /* #home {
+    padding-left: 1.8em;
+  }
+
+  #contact {
+    padding-right: 1.8em;
+  } */
+  /* 
+  #home {
+    padding: 0.15em 44vw;
+  }
+
+  #portfolio {
+    padding: 0.15em 36.4vw;
+  }
+
+  #sites {
+    padding: 0.15em 42.4vw;
+  }
+
+  #contact {
+    padding: 0.15em 39.5vw;
+  } */
+
+  .header {
+    background-color: rgba(0, 0, 0, 0);
+    flex-direction: row;
+    align-items: left;
+    width: 100%;
   }
 }
