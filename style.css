@@ -251,7 +251,7 @@ a:hover::after {
   background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   top: 0; /*start from the top of the div*/
   bottom: 0; /*extends it to the bottom of the div*/
-  left: 60%; /*centers it horizontally*/
+  left: 50%; /*centers it horizontally*/
   margin-left: -3px;
   border-radius: 400px;
 }
@@ -269,7 +269,7 @@ a:hover::after {
 }
 
 .tlright {
-  left: 60%;
+  left: 50%;
 }
 
 /*arrows pointing right for left container */
@@ -280,7 +280,7 @@ a:hover::after {
   top: 55px;
   width: 0;
   z-index: 1;
-  right: 30px;
+  right: 90px;
   border: medium solid white;
   border-color: transparent transparent transparent white; /*this makes the shape*/
   border-width: 10px 0 10px 10px;
@@ -294,7 +294,7 @@ a:hover::after {
   top: 55px;
   width: 0;
   z-index: 1;
-  left: 30px;
+  left: 10px;
   border: medium solid white;
   border-color: transparent white transparent transparent; /*this makes the shape*/
   border-width: 10px 10px 10px 0;
@@ -309,7 +309,7 @@ a:hover::after {
 }
 
 /* media queries for responsive timeline on <800px wide screens */
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 2100px) {
   /* place the timeline to the left */
 
   .timeline:after {
