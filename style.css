@@ -211,6 +211,36 @@ a:hover::after {
   box-shadow: #151515 1px 12px 50px;
 }
 
+/** sites.html css here  */
+.sites-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sites-container h1{
+  font-size: calc(1.3em + 0.33vw);
+  font-weight: bold;
+  margin-bottom: 8px;
+  align-self: flex-start;
+}
+
+.sites-container img{
+  width: 64vw;
+  height: 30vw;
+  object-fit: cover;
+  border-left: 4px solid #544f4c;
+  border-right: 4px solid #544f4c;
+  border-radius: 0.3em;
+  padding: 0px 8px;
+}
+
+.sites-container p{
+  align-self:flex-start;
+  margin-bottom: 32px;
+}
+
+/** footer css here  */
 .footerLeft {
   grid-area: footerLeft;
   position: relative;
@@ -231,8 +261,7 @@ a:hover::after {
 }
 
 
-/* timeline in portfolio.html */
-
+/** timeline in portfolio.html */
 /* this is the actual timeline line */
 .timeline {
   position: relative;
@@ -308,7 +337,7 @@ a:hover::after {
   margin-right: 32px;
 }
 
-/* media queries for responsive timeline on <800px wide screens */
+/** media queries for responsive timeline on <800px wide screens */
 @media screen and (max-width: 2100px) {
   /* place the timeline to the left */
 
