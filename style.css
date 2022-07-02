@@ -204,11 +204,25 @@ a:hover::after {
 
 .main {
   grid-area: main;
-  padding: 15px;
+  padding: 16px;
+  padding-left: 128px;
+  padding-right: 128px;
   animation: 0.7s ease-out 0s 1 slideUpFadeIn;
   margin-top: 30px;
   text-align: left;
   box-shadow: #151515 1px 12px 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .main{
+    grid-area: main;
+    padding: 16px;
+    animation: 0.7s ease-out 0s 1 slideUpFadeIn;
+    margin-top: 30px;
+    text-align: left;
+    box-shadow: #151515 1px 12px 50px;
+  }
+  
 }
 
 /** sites.html css here  */
@@ -392,7 +406,7 @@ a:hover::after {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 512px) {
   body {
     padding-top: 1px;
     margin-top: 2px;
